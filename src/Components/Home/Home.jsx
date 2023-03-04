@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useState, useEffect } from "react";
-import MediaItem from "../../Container/MediaItem/MediaItem";
+import { MediaItem } from "../../Container/index";
 
 const Home = () => {
   const [trendingMovies, setTrendingMovies] = useState([]);

@@ -11,7 +11,8 @@
 }
 
 body {
-  background-color: var(--bg-color);
+  background: #060718;
+  /* var(--bg-color); */
   font-family: var(--main-font);
   color: var(--font-color);
 
@@ -40,6 +41,16 @@ body {
 .mylink {
   text-decoration: none;
   color: var(--font-color);
+}
+
+.offline {
+  background-color: #060718;
+  color: white;
+  position: fixed;
+  left: 50;
+  box-shadow: 10px 10px 10px #ccc;
+  bottom: 50px;
+  padding: 20px;
 }
 
 .my-input {

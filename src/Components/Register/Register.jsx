@@ -38,29 +38,6 @@ const Register = () => {
     console.log(myUser);
   }
   //--set The sendRegisterDataToApi function uses the axios library to send an HTTP POST request to a specified API endpoint URL with the user object as the request body.
-  //   async function sendRegisterDataToApi() {
-  //     setIsLoading(false)
-
-  //     try {
-  //       let { data } = await axios.post(
-  //         "https://handsome-cummerbund-fawn.cyclic.app/auth/register",
-  //         user, {
-  //         headers: { 'Content-Type': 'application/json' }
-  //       });
-
-  //       if (data.message === "User Created Successfully") {
-  //         setIsLoading(false)
-
-  //         //login||Home
-  //         console.log('directed')
-  //       } else {
-  //         setIsLoading(false)
-
-  // console.log(error.response.data)      }
-  //     } catch (error) {
-  //       setError("An error occurred while registering. Please try again later.");
-  //     }
-  //   }
 
   //The submitRegisterForm function is used as a callback for the form's onSubmit event. It calls the preventDefault method to prevent the default form submission behavior and then calls the sendRegisterDataToApi function to send the user data to the API endpoint.
 

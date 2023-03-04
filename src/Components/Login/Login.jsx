@@ -42,7 +42,7 @@ const Login = ({ saveUserData }) => {
       saveUserData();
       console.log("saveUserData()");
 
-      navigate('/home');
+      navigate('/');
     } else {
       setIsLoading(false);
       setError(data.errorMessage)

@@ -4,7 +4,7 @@ import "./navbar.css";
 
 const Navbar = ({ userData, logOut }) => {
   console.log('login');
-  
+
   return (
     <nav className=" my-body p-2 flex-md-row flex-column d-flex justify-content-between">
       <div className="left-nav flex-md-row flex-column d-flex align-items-center ">
@@ -12,7 +12,7 @@ const Navbar = ({ userData, logOut }) => {
         {userData ? (
           <ul className="list-unstyled d-flex m-0 align-items-center">
             <li className="px-2">
-              <Link className="mylink" to="home">
+              <Link className="mylink" to="/">
                 Home
               </Link>{" "}
             </li>
@@ -65,7 +65,7 @@ const Navbar = ({ userData, logOut }) => {
           ) : (
             <div className="d-flex align-items-center">
               <li className="px-2">
-                <Link className="mylink" to="/">
+                <Link className="mylink" to="register">
                   Register
                 </Link>{" "}
               </li>

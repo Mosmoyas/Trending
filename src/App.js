@@ -4,7 +4,8 @@ import './App.css';
 
 import { Layout, Home, About, Movies, Tv, People, Register, Login, Profile, ProtectedRoute } from './Components/index';
 import { useState, useEffect } from 'react';
-const { Buffer } = require('buffer');
+import { ItemDetails } from './Container/index.js';
+import { Offline, Online } from 'react-detect-offline';
 
 function App() {
 
@@ -28,19 +29,27 @@ function App() {
   let routers = createBrowserRouter([
     {
       path: '/', element: <Layout userData={userData} setuserData={setuserData} />, children: [
-        { path: 'home', element: <ProtectedRoute><Home userData={userData} /> </ProtectedRoute> },
+        { index: true, element: <ProtectedRoute><Home userData={userData} /> </ProtectedRoute> },
         { path: 'about', element: <ProtectedRoute><About userData={userData} /> </ProtectedRoute> },
         { path: 'movies', element: <ProtectedRoute>  <Movies userData={userData} /></ProtectedRoute> },
         { path: 'people', element: <ProtectedRoute><People userData={userData} /> </ProtectedRoute> },
         { path: 'tv', element: <ProtectedRoute><Tv userData={userData} /></ProtectedRoute> },
         { path: 'profile', element: <ProtectedRoute><Profile userData={userData} /> </ProtectedRoute> },
+        { path: 'itemdetails/:id/:media_type', element: <ProtectedRoute><ItemDetails userData={userData} /> </ProtectedRoute> },
         { path: 'login', element: <Login saveUserData={saveUserData} /> },
-        { index: true, element: <Register /> },
+        { path: 'register', element: <Register /> },
 
       ]
     }
   ]);
-  return <RouterProvider router={routers} />
+  return <>
+    <div>
+
+      <Offline><div className='offline'>You Are Offline</div></Offline>
+    </div>
+
+    <RouterProvider router={routers} />
+  </>
 }
 
 export default App;
